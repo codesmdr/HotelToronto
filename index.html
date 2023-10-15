@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Toronto</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body id="home">
+    <header>
+      <div class="banner">
+        <div class="logo">
+          <img src="images/logo3.png" alt="" />
+          <h1>Hotel Toronto</h1>
+        </div>
+        <div class="nav">
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#rooms">Rooms</a>
+              <a href="#restaurant">Restaurant</a>
+              <a href="#amenities">Amenities</a>
+              <a href="#faqs">Faqs</a>
+              <a href="#contact">Contact Us</a>
+              <a href="#book" class="book">Book Today</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <i class="fa-solid fa-bars" id="more"></i>
+
+      <div class="sidebar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#restaurant">Restaurant</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#faqs">Faqs</a>
+        <a href="#contact">Contact</a>
+        <a href="#book">Book Today</a>
+      </div>
+
+      <div class="center">
+        <h1>
+          <span class="one">Hello,</span> <span class="two">Bonjour,</span>
+          <span class="three">Hola!</span>
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, in
+          ipsum placeat ea beatae nobis debitis tempora accusantium aspernatur
+          quam pariatur excepturi. Cumque, maxime! Consequatur at vero ratione
+          sunt enim? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Placeat, obcaecati! Rerum, nostrum? Eos labore nostrum modi! Ut
+          architecto, voluptatum enim dolor, tempora vel repellat ipsum, quam
+          aspernatur et modi eum?
+        </p>
+        <div class="socials">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="images/home1.jpg" class="slide" alt="" />
+      </div>
+      <div class="image_item">
+        <img
+          src="images/home1.jpg"
+          alt=""
+          class="slide"
+          onclick="img('images/home1.jpg')"
+        />
+        <img
+          src="images/home22.jpg"
+          alt=""
+          class="slide"
+          onclick="img('images/home22.jpg')"
+        />
+        <img
+          src="images/home2.jpg"
+          alt=""
+          class="slide"
+          onclick="img('images/home2.jpg')"
+        />
+        <img
+          src="images/home4.jpg"
+          alt=""
+          class="slide"
+          onclick="img('images/home4.jpg')"
+        />
+      </div>
+
+      <div class="booking" id="book">
+        <label>Check In:</label>
+        <input type="date" />
+        <label>Check Out:</label>
+        <input type="date" />
+        <label>Adults:</label>
+        <input type="number" placeholder="0" />
+        <label>Rooms:</label>
+        <input type="number" placeholder="0" />
+        <div class="check">
+          <button>Check Availability</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="about" id="about">
+      <h1>About Our Hotel</h1>
+      <div class="about-container">
+        <div class="about-title">
+          <h2>Welcome to Hotel Toronto</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            corrupti maiores quia voluptatum facere porro? Aliquam deleniti
+            inventore, sit facere, iste quos impedit nisi molestiae eveniet quam
+            iusto? Optio, accusantium. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Voluptate eos, nam esse nihil voluptas
+            reprehenderit. Vel et ut facere eligendi, accusamus doloremque natus
+            voluptate ex sequi, odit blanditiis commodi optio. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Magnam laudantium, vel
+            temporibus natus ab, mollitia quae porro tenetur dignissimos error
+            cupiditate. Ad accusantium mollitia ab quaerat temporibus nisi
+            voluptates necessitatibus!
+          </p>
+          <button>Read More</button>
+        </div>
+        <div class="about-image">
+          <img src="images/aboutimage.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="rooms" id="rooms">
+      <h1>Rooms & Suites</h1>
+
+      <div class="room-box">
+        <div class="room-container">
+          <div class="room-image">
+            <img src="images/bed1.jpg" alt="" />
+          </div>
+          <div class="room-title">
+            <h2>Bellair Suite</h2>
+          </div>
+          <div class="content">
+            <div class="beds">
+              <div class="beds-title">
+                <i class="fa-solid fa-bed"></i>
+                <h2>Beds</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="bath">
+              <div class="bath-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Bathrooms</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="people">
+              <div class="people-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Occupancy</h2>
+              </div>
+              <div class="people-info">
+                <p>
+                  One-bedroom: 2 adults, or 2 adults and 1 child in a crib;
+                  Two-bedroom: 4 adults, or 2 adults and 2 children
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-container">
+          <div class="room-image">
+            <img src="images/bed2.jpg" alt="" />
+          </div>
+          <div class="room-title">
+            <h2>Royal Suite</h2>
+          </div>
+          <div class="content">
+            <div class="beds">
+              <div class="beds-title">
+                <i class="fa-solid fa-bed"></i>
+                <h2>Beds</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="bath">
+              <div class="bath-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Bathrooms</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="people">
+              <div class="people-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Occupancy</h2>
+              </div>
+              <div class="people-info">
+                <p>
+                  One-bedroom: 2 adults, or 2 adults and 1 child in a crib;
+                  Two-bedroom: 4 adults, or 2 adults and 2 children
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-container">
+          <div class="room-image">
+            <img src="images/bed3.jpg" alt="" />
+          </div>
+          <div class="room-title">
+            <h2>Yorkville Suite</h2>
+          </div>
+          <div class="content">
+            <div class="beds">
+              <div class="beds-title">
+                <i class="fa-solid fa-bed"></i>
+                <h2>Beds</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="bath">
+              <div class="bath-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Bathrooms</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="people">
+              <div class="people-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Occupancy</h2>
+              </div>
+              <div class="people-info">
+                <p>
+                  One-bedroom: 2 adults, or 2 adults and 1 child in a crib;
+                  Two-bedroom: 4 adults, or 2 adults and 2 children
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-container">
+          <div class="room-image">
+            <img src="images/bed4.jpg" alt="" />
+          </div>
+          <div class="room-title">
+            <h2>Luxury Penthouse</h2>
+          </div>
+          <div class="content">
+            <div class="beds">
+              <div class="beds-title">
+                <i class="fa-solid fa-bed"></i>
+                <h2>Beds</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="bath">
+              <div class="bath-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Bathrooms</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="people">
+              <div class="people-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Occupancy</h2>
+              </div>
+              <div class="people-info">
+                <p>
+                  One-bedroom: 2 adults, or 2 adults and 1 child in a crib;
+                  Two-bedroom: 4 adults, or 2 adults and 2 children
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-container">
+          <div class="room-image">
+            <img src="images/bed5.jpg" alt="" />
+          </div>
+          <div class="room-title">
+            <h2>Skyview Suite</h2>
+          </div>
+          <div class="content">
+            <div class="beds">
+              <div class="beds-title">
+                <i class="fa-solid fa-bed"></i>
+                <h2>Beds</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="bath">
+              <div class="bath-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Bathrooms</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="people">
+              <div class="people-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Occupancy</h2>
+              </div>
+              <div class="people-info">
+                <p>
+                  One-bedroom: 2 adults, or 2 adults and 1 child in a crib;
+                  Two-bedroom: 4 adults, or 2 adults and 2 children
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-container">
+          <div class="room-image">
+            <img src="images/bed6.jpg" alt="" />
+          </div>
+          <div class="room-title">
+            <h2>Montebella Suite</h2>
+          </div>
+          <div class="content">
+            <div class="beds">
+              <div class="beds-title">
+                <i class="fa-solid fa-bed"></i>
+                <h2>Beds</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="bath">
+              <div class="bath-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Bathrooms</h2>
+              </div>
+              <div class="beds-info">
+                <p>
+                  One-bedroom: One king bed; Two-bedroom: One king bed and two
+                  double beds
+                </p>
+              </div>
+            </div>
+
+            <div class="people">
+              <div class="people-title">
+                <i class="fa-solid fa-bath"></i>
+                <h2>Occupancy</h2>
+              </div>
+              <div class="people-info">
+                <p>
+                  One-bedroom: 2 adults, or 2 adults and 1 child in a crib;
+                  Two-bedroom: 4 adults, or 2 adults and 2 children
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="restaurant" id="restaurant">
+      <h1>Wine and Dine</h1>
+      <div class="restaurant-container">
+        <div class="restaurant-box">
+          <div class="restaurant-image">
+            <img src="images/food1.jpg" alt="" />
+          </div>
+
+          <div class="restaurant-info">
+            <h3>High-class Scenary</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              ex hic iusto deleniti laudantium mollitia ipsa rerum eius
+              asperiores vitae. Eaque fuga ad nobis quaerat debitis hic, amet
+              tenetur soluta.
+            </p>
+          </div>
+        </div>
+
+        <div class="restaurant-box">
+          <div class="restaurant-info">
+            <h3>First Class Chefs</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              ex hic iusto deleniti laudantium mollitia ipsa rerum eius
+              asperiores vitae. Eaque fuga ad nobis quaerat debitis hic, amet
+              tenetur soluta.
+            </p>
+          </div>
+
+          <div class="restaurant-image">
+            <img src="images/food2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="restaurant-box">
+          <div class="restaurant-image">
+            <img src="images/food3.jpg" alt="" />
+          </div>
+
+          <div class="restaurant-info">
+            <h3>Winery</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              ex hic iusto deleniti laudantium mollitia ipsa rerum eius
+              asperiores vitae. Eaque fuga ad nobis quaerat debitis hic, amet
+              tenetur soluta.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="amenities" id="amenities">
+      <h1>Amenities</h1>
+      <div class="amenities-container">
+        <div class="amenities-box">
+          <img src="images/icon-1.png" alt="" />
+          <h3>Food & Drinks</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            officiis molestiae quisquam et. Natus aperiam in minima omnis
+            deserunt voluptatibus
+          </p>
+        </div>
+
+        <div class="amenities-box">
+          <img src="images/icon-2.png" alt="" />
+          <h3>Outdoor Dining</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            officiis molestiae quisquam et. Natus aperiam in minima omnis
+            deserunt voluptatibus
+          </p>
+        </div>
+
+        <div class="amenities-box">
+          <img src="images/icon-3.png" alt="" />
+          <h3>Beach View</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            officiis molestiae quisquam et. Natus aperiam in minima omnis
+            deserunt voluptatibus
+          </p>
+        </div>
+
+        <div class="amenities-box">
+          <img src="images/icon-4.png" alt="" />
+          <h3>Decorations</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            officiis molestiae quisquam et. Natus aperiam in minima omnis
+            deserunt voluptatibus
+          </p>
+        </div>
+
+        <div class="amenities-box">
+          <img src="images/icon-5.png" alt="" />
+          <h3>Swimming Pool</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            officiis molestiae quisquam et. Natus aperiam in minima omnis
+            deserunt voluptatibus
+          </p>
+        </div>
+
+        <div class="amenities-box">
+          <img src="images/icon-6.png" alt="" />
+          <h3>Resort Beach</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            officiis molestiae quisquam et. Natus aperiam in minima omnis
+            deserunt voluptatibus
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="review">
+      <h1>What Our Guests Say</h1>
+
+      <div class="review-container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="review-box">
+                <div class="review-image">
+                  <img src="images/review1.jpg" alt="" />
+                </div>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Nobis labore eaque recusandae ad temporibus architecto, quis
+                  cupiditate minima laudantium et iusto consequuntur quia
+                  expedita alias earum, optio nesciunt. Nam, et.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="review-box">
+                <div class="review-image">
+                  <img src="images/review2.jpg" alt="" />
+                </div>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Nobis labore eaque recusandae ad temporibus architecto, quis
+                  cupiditate minima laudantium et iusto consequuntur quia
+                  expedita alias earum, optio nesciunt. Nam, et.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="review-box">
+                <div class="review-image">
+                  <img src="images/review3.jpg" alt="" />
+                </div>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Nobis labore eaque recusandae ad temporibus architecto, quis
+                  cupiditate minima laudantium et iusto consequuntur quia
+                  expedita alias earum, optio nesciunt. Nam, et.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="review-box">
+                <div class="review-image">
+                  <img src="images/review4.jpg" alt="" />
+                </div>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Nobis labore eaque recusandae ad temporibus architecto, quis
+                  cupiditate minima laudantium et iusto consequuntur quia
+                  expedita alias earum, optio nesciunt. Nam, et.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="review-box">
+                <div class="review-image">
+                  <img src="images/review5.jpg" alt="" />
+                </div>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Nobis labore eaque recusandae ad temporibus architecto, quis
+                  cupiditate minima laudantium et iusto consequuntur quia
+                  expedita alias earum, optio nesciunt. Nam, et.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="review-box">
+                <div class="review-image">
+                  <img src="images/review6.jpg" alt="" />
+                </div>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Nobis labore eaque recusandae ad temporibus architecto, quis
+                  cupiditate minima laudantium et iusto consequuntur quia
+                  expedita alias earum, optio nesciunt. Nam, et.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="review-box">
+                <div class="review-image">
+                  <img src="images/review7.jpg" alt="" />
+                </div>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Nobis labore eaque recusandae ad temporibus architecto, quis
+                  cupiditate minima laudantium et iusto consequuntur quia
+                  expedita alias earum, optio nesciunt. Nam, et.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faqs" id="faqs">
+      <div class="email">
+        <h1>Stay in touch</h1>
+        <form action="">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            id="name"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            id="email"
+            required
+          />
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write something.."
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="faqs-container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="box active">
+          <h3>how to cancel</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt
+            aspernatur excepturi eos! Quibusdam, sapiente.
+          </p>
+        </div>
+        <div class="box">
+          <h3>Are there any vacancy</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsam
+            neque quaerat mollitia ratione? Soluta!
+          </p>
+        </div>
+        <div class="box">
+          <h3>What are payment methods</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsam
+            neque quaerat mollitia ratione? Soluta!
+          </p>
+        </div>
+        <div class="box">
+          <h3>How to claim coupons codes</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsam
+            neque quaerat mollitia ratione? Soluta!
+          </p>
+        </div>
+        <div class="box">
+          <h3>What are the age requirements</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsam
+            neque quaerat mollitia ratione? Soluta!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <iframe
+        width="100%"
+        height="345"
+        style="border: 0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJIkeiBUbPpyZczTKnJ32vvBxYah3rIOk
+          &q=CN-Tower,Toronto+ON"
+      >
+      </iframe>
+    </section>
+
+    <footer id="contact">
+      <div class="companyfooter">
+        <h1>Hotel Toronto</h1>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+
+        <div class="socials">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-github"></i>
+        </div>
+        <p>&copy; 2023 CodesMDR</p>
+      </div>
+      <div class="explore">
+        <h2>Explore</h2>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#roos">Rooms</a>
+        <a href="#restaurant">Restaurant</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#faqs">Faqs</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="privacy">
+        <h2>Contact</h2>
+        <div class="location">
+          <div>
+            <i class="fa-solid fa-map-pin"></i>290 Yorkville Rd, Toronto, ON M4V
+            3L9
+          </div>
+          <div><i class="fa-solid fa-phone"></i> Phone: 1+ 416 908-8302</div>
+          <div><i class="fa-solid fa-fax"></i> Fax: 800 123 3456</div>
+          <div>
+            <i class="fa-solid fa-envelope"></i> Email: HToronto@book.com
+          </div>
+          <div><i class="fa-regular fa-clock"></i>Mon-Fri: 10 a.m - 8 p.m</div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="top" id="home">
+      <a href="#"><i class="fa-solid fa-up-long"></i></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

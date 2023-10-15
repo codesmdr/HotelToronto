@@ -1,0 +1,831 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Reenie+Beanie&family=Luckiest+Guy&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.banner .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+}
+
+.banner .nav {
+  margin-right: 200px;
+  list-style: none;
+}
+.banner .nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.banner .nav .book {
+  color: rgb(255, 255, 255);
+  padding: 10px 10px;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  border-bottom: transparent;
+}
+
+.banner .nav .book:hover {
+  background-color: white;
+  color: black;
+}
+.banner .nav a:hover,
+.banner .nav a:focus {
+  color: black;
+}
+
+.banner .logo h1 {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 50px;
+  box-shadow: rgba(0, 0, 0, 0.993) 0px 25px 20px -20px;
+  text-shadow: 3px 3px #0a0a14;
+}
+
+.banner .logo img {
+  height: 90px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/*SIDEBAR*/
+.sidebar {
+  display: none;
+}
+.sidebar.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: right;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.842);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 300px;
+  border-radius: 5px;
+  top: 0;
+  right: 0;
+}
+
+.sidebar a {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.sidebar a:hover {
+  color: rgb(141, 198, 236);
+  transition: 0.5s;
+}
+
+#more {
+  visibility: hidden;
+}
+#more {
+  display: flex;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  transition: all 0.2s;
+}
+
+#more.change {
+  transform: rotateZ(-90deg);
+  color: white;
+}
+
+header {
+  min-height: 100vh;
+  position: relative;
+}
+
+header .center {
+  padding-left: 200px;
+  padding-bottom: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.356);
+}
+
+header .center h1 {
+  font-size: 100px;
+  margin-top: 200px;
+}
+header .center p {
+  max-width: 500px;
+  padding-top: 10px;
+}
+
+header .center button {
+  padding-top: 10px;
+  padding: 20px 30px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+header .center button:hover,
+header .center button:focus {
+  transition: 0.9s;
+  transform: scale(0.9);
+  background-color: rgba(255, 255, 255, 0.822);
+}
+
+header .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+header .image_item {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+header .image_item img {
+  width: 240px;
+  height: 134px;
+  margin: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.986) 0px 25px 20px -20px;
+  opacity: 0.85;
+}
+
+header .image_item img:hover {
+  opacity: 1;
+  transition: 0.5s;
+  border: 1px solid white;
+}
+
+/*SOCIALS*/
+header .socials {
+  display: flex;
+  margin-top: 20px;
+}
+
+header .socials a {
+  font-size: 40px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.418);
+}
+
+header .socials a:hover {
+  color: white;
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+/*BOOKING*/
+.booking {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 10%;
+  padding: 10px;
+  bottom: 0;
+  padding: 30px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  /* background-color: rgba(247, 106, 87, 0.918); */
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.46);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.986) 0px 25px 20px -20px;
+}
+
+.booking input {
+  padding: 5px;
+}
+
+.booking label {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.booking .check button {
+  background-color: rgb(7, 7, 7);
+  padding: 15px 25px;
+  border-radius: 5px;
+  margin-left: 40px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border: 1px solid black;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.booking .check button:focus {
+  outline: none;
+}
+
+.booking .check button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.booking input[type="number"] {
+  width: 50px;
+  background-color: rgba(160, 115, 115, 0.219);
+  border: 1px solid black;
+  color: white;
+}
+.booking input[type="date"] {
+  background-color: rgba(160, 115, 115, 0.219);
+  border: 1px solid black;
+  color: white;
+}
+input::placeholder {
+  color: white;
+}
+
+/*ABOUT*/
+.about {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+  margin-top: 70px;
+  padding-bottom: 70px;
+}
+
+.about h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-family: "Luckiest Guy", cursive;
+}
+.about p {
+  max-width: 500px;
+}
+
+.about-container {
+  display: flex;
+  margin-top: 20px;
+  gap: 40px;
+}
+.about-title h2 {
+  margin-bottom: 20px;
+}
+.about-title button {
+  padding: 20px;
+  width: 230px;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: orange;
+}
+.about-title button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 166, 0, 0.757);
+}
+.about-image {
+  width: 700px;
+  height: 400px;
+  border: 1px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.about-image img {
+  width: 100%;
+  height: 100%;
+}
+/*Rooms*/
+.rooms {
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  background-color: rgba(128, 128, 128, 0.294);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+}
+
+.room-box {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 20px;
+  padding-bottom: 50px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: 0.6s;
+  cursor: pointer;
+  gap: 30px;
+  padding: 10px;
+}
+.content h2 {
+  font-size: 15px;
+}
+.content p {
+  margin-top: 10px;
+}
+
+.content:hover {
+  opacity: 1;
+}
+.rooms h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-family: "Luckiest Guy", cursive;
+}
+.rooms h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.room-container {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.room-image {
+  width: 500px;
+  height: 300px;
+}
+.room-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.room-title h1 {
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/*RESTAURANT*/
+.restaurant {
+  min-height: 80vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+  padding: 40px 150px 70px 150px;
+}
+.restaurant h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.restaurant-image {
+  height: 400px;
+  width: auto;
+  border: 1px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.restaurant-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.restaurant-box {
+  display: flex;
+  align-items: center;
+  gap: 210px;
+}
+
+.restaurant-box p {
+  width: 500px;
+}
+.restaurant-box img {
+  height: 100%;
+  width: auto;
+}
+/*RESTAURANT*/
+/*AMENITIES*/
+.amenities {
+  min-height: 40vh;
+  padding: 50px 200px 50px 200px;
+  background-color: rgba(128, 128, 128, 0.294);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+}
+.amenities h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-family: "Luckiest Guy", cursive;
+}
+.amenities img {
+  color: white;
+}
+.amenities-container {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  justify-items: center;
+  gap: 50px;
+}
+.amenities-box {
+  text-align: center;
+}
+.amenities-box h3 {
+  margin: 15px 0px 15px 0px;
+}
+.amenities-box p {
+  width: 300px;
+}
+/*AMENITIES*/
+
+/*REVIEWS*/
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  padding-bottom: 35px;
+}
+
+.review {
+  min-height: 70vh;
+  padding: 50px 270px 70px 270px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+}
+.review h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+  font-family: "Luckiest Guy", cursive;
+}
+/* .review-container {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  justify-items: center;
+} */
+.review-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border-radius: 10px;
+  line-height: 24px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.review-box p {
+  text-align: center;
+}
+.review-image {
+  width: 150px;
+  height: 150px;
+}
+.review-image img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+/*REVIEWS*/
+
+/*FAQS*/
+
+.faqs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  min-height: 60vh;
+  padding: 50px 270px 10px 270px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+  background-color: black;
+  background: linear-gradient(rgba(0, 0, 0, 1.1), rgba(0, 0, 0, 0.5)),
+    url("images/faqs.jpg") center;
+  background-attachment: fixed;
+}
+.faqs h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Luckiest Guy", cursive;
+}
+.faqs .box h3 {
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  width: 400px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.faqs .box p {
+  width: 400px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: white;
+  display: none;
+}
+
+.faqs .box.active p {
+  display: inline-block;
+}
+.email p {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.email form {
+  border: 1px solid rgba(128, 128, 128, 0.576);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.274);
+  border-radius: 5px;
+  width: 500px;
+}
+
+.email button {
+  text-align: center;
+  border: none;
+  width: 400px;
+  padding: 10px;
+  background-color: rgb(18, 18, 19);
+  border-radius: 5px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.email button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.768);
+}
+
+.email input {
+  padding: 10px;
+  width: 400px;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 30px;
+}
+.email textarea:focus {
+  outline: none;
+}
+.email textarea {
+  padding: 15px;
+  width: 400px;
+  height: 140px;
+  margin-bottom: 15px;
+  border: none;
+}
+
+.email input::placeholder {
+  color: black;
+}
+/*FAQS*/
+/*FOOTER*/
+
+footer {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 30vh;
+}
+footer a {
+  color: rgba(255, 255, 255, 0.366);
+}
+footer a:hover {
+  cursor: pointer;
+  color: white;
+}
+footer h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+footer a {
+  font-size: 20px;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.location i {
+  margin-right: 5px;
+}
+.explore,
+.privacy {
+  display: flex;
+  flex-direction: column;
+}
+.companyfooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.companyfooter span {
+  color: rgb(161, 6, 250);
+  font-size: 90px;
+}
+.companyfooter h1 {
+  font-size: 80px;
+  font-family: "Reenie Beanie", cursive;
+}
+.companyfooter h3 {
+  width: 200px;
+  color: white;
+  pointer-events: none;
+}
+.companyfooter h4 {
+  font-style: italic;
+  font-weight: 300;
+}
+.companyfooter p {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.socials {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.socials i {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.366);
+}
+.socials i:hover {
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+
+.top {
+  position: absolute;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+.top i {
+  font-size: 20px;
+}
+.top a {
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.top a:hover {
+  color: rgb(69, 139, 252);
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1699px) {
+  .image_item {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1357px) {
+  .banner .nav {
+    display: none;
+  }
+  #more {
+    visibility: visible;
+  }
+
+  header .image {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1129px) {
+  * {
+    font-size: 95%;
+  }
+  .center h1 span {
+    font-size: 50px;
+  }
+
+  .booking {
+    left: 20%;
+    height: auto;
+    font-size: 50%;
+    bottom: 0;
+  }
+
+  header .center {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  header .center p {
+    left: 90%;
+  }
+
+  header .banner .logo {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .booking {
+    left: 20%;
+    height: auto;
+    font-size: 50%;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 906px) {
+  .booking {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 854px) {
+  .booking {
+    font-size: 10%;
+    left: 0;
+  }
+}
