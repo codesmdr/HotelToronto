@@ -364,7 +364,8 @@ input::placeholder {
   opacity: 0;
   transition: 0.6s;
   cursor: pointer;
-  gap: 30px;
+  gap: 20px;
+  font-size: 13px;
   padding: 10px;
 }
 .content h2 {
